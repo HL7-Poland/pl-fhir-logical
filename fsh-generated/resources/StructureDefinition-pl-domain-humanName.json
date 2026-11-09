@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-humanName",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-humanName",
+  "name": "PLDomainHumanName",
+  "title": "HumanName: Imię i nazwisko (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a person's name in Polish medical records. Specialises EHDSHumanName from the EHDS Common Logical Models.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy imienia i nazwiska osoby w polskiej dokumentacji medycznej. Specjalizacja klasy EHDSHumanName z modeli logicznych EHDS (EHDS Common Logical Models)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-humanName",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHumanName",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-humanName",
+        "path": "pl-domain-humanName",
+        "short": "HumanName: Imię i nazwisko (model domenowy)",
+        "definition": "Domain model of a person's name in Polish medical records. Specialises EHDSHumanName from the EHDS Common Logical Models."
+      },
+      {
+        "id": "pl-domain-humanName.family",
+        "path": "pl-domain-humanName.family",
+        "short": "Family name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Nazwisko"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Family name as a single string, also when it consists of two parts.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nazwisko jako jeden ciąg znaków, także gdy jest dwuczłonowe."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-humanName.given",
+        "path": "pl-domain-humanName.given",
+        "short": "Given names",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Imiona"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "First given name (mandatory) and optional second given name.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Pierwsze imię obowiązkowo, drugie opcjonalnie."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "2"
+      }
+    ]
+  }
+}

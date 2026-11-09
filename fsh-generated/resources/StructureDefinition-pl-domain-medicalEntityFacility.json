@@ -1,0 +1,218 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-medicalEntityFacility",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityFacility",
+  "name": "PLDomainMedicalEntityFacility",
+  "title": "MedicalEntityFacility: Zakład podmiotu medycznego (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a facility (local unit) of a medical entity, identified by its own 14-digit REGON number.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy zakładu (jednostki lokalnej) podmiotu medycznego, identyfikowanego własnym 14-znakowym numerem REGON."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityFacility",
+  "baseDefinition": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-medicalEntityFacility",
+        "path": "pl-domain-medicalEntityFacility",
+        "short": "MedicalEntityFacility: Zakład podmiotu medycznego (model domenowy)",
+        "definition": "Domain model of a facility (local unit) of a medical entity, identified by its own 14-digit REGON number."
+      },
+      {
+        "id": "pl-domain-medicalEntityFacility.address",
+        "path": "pl-domain-medicalEntityFacility.address",
+        "short": "Address of the facility",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres zakładu"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Address of the facility of the medical entity.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adres zakładu podmiotu medycznego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-medicalEntityFacility.telecom",
+        "path": "pl-domain-medicalEntityFacility.telecom",
+        "short": "Contact details of the facility",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe zakładu"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the facility, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe zakładu, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-medicalEntityFacility.partOf",
+        "path": "pl-domain-medicalEntityFacility.partOf",
+        "short": "Medical entity the facility belongs to",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Podmiot medyczny, do którego należy zakład"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Medical entity of which this facility is a part.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Podmiot medyczny, którego częścią jest ten zakład."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntity"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-medicalEntityFacility.regonLocalUnitIdentifier",
+        "path": "pl-domain-medicalEntityFacility.regonLocalUnitIdentifier",
+        "short": "REGON number (14 digits)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer REGON (14-znakowy)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "14-digit REGON statistical number of the local unit of the medical entity in the National Official Business Register (REGON).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "14-znakowy numer identyfikacyjny REGON jednostki lokalnej podmiotu medycznego w Krajowym Rejestrze Urzędowym Podmiotów Gospodarki Narodowej (REGON)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      }
+    ]
+  }
+}

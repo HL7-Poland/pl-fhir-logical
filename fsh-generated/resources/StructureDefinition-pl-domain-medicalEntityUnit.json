@@ -1,0 +1,218 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-medicalEntityUnit",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityUnit",
+  "name": "PLDomainMedicalEntityUnit",
+  "title": "MedicalEntityUnit: Jednostka organizacyjna (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of an organisational unit of a medical entity (according to RPWDL), identified by parts I and V of the departmental identification code.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy jednostki organizacyjnej podmiotu leczniczego (wg RPWDL), identyfikowanej częściami I i V systemu resortowych kodów identyfikacyjnych."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityUnit",
+  "baseDefinition": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-medicalEntityUnit",
+        "path": "pl-domain-medicalEntityUnit",
+        "short": "MedicalEntityUnit: Jednostka organizacyjna (model domenowy)",
+        "definition": "Domain model of an organisational unit of a medical entity (according to RPWDL), identified by parts I and V of the departmental identification code."
+      },
+      {
+        "id": "pl-domain-medicalEntityUnit.address",
+        "path": "pl-domain-medicalEntityUnit.address",
+        "short": "Address of the organisational unit",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres jednostki organizacyjnej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Address of the organisational unit of the medical entity.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adres jednostki organizacyjnej podmiotu leczniczego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-medicalEntityUnit.telecom",
+        "path": "pl-domain-medicalEntityUnit.telecom",
+        "short": "Contact details of the organisational unit",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe jednostki organizacyjnej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the organisational unit, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe jednostki organizacyjnej, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-medicalEntityUnit.partOf",
+        "path": "pl-domain-medicalEntityUnit.partOf",
+        "short": "Facility the organisational unit belongs to",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zakład, do którego należy jednostka organizacyjna"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Facility of the medical entity of which this organisational unit is a part.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Zakład podmiotu medycznego, którego częścią jest ta jednostka organizacyjna."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityFacility"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-medicalEntityUnit.entityUnitIdentifier",
+        "path": "pl-domain-medicalEntityUnit.entityUnitIdentifier",
+        "short": "Organisational unit identifier (parts I and V of the departmental code)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator jednostki organizacyjnej (część I i V kodu resortowego)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier of the organisational unit of the medical entity in the RPWDL register, i.e. parts I and V of the departmental identification code.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikator jednostki organizacyjnej podmiotu leczniczego w rejestrze RPWDL, czyli część I i V systemu resortowych kodów identyfikacyjnych."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      }
+    ]
+  }
+}

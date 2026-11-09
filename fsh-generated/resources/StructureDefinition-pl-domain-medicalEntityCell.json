@@ -1,0 +1,260 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-medicalEntityCell",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityCell",
+  "name": "PLDomainMedicalEntityCell",
+  "title": "MedicalEntityCell: Komórka organizacyjna (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of an organisational cell of a medical entity (according to RPWDL), identified by parts I and VII of the departmental identification code.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy komórki organizacyjnej podmiotu leczniczego (wg RPWDL), identyfikowanej częściami I i VII systemu resortowych kodów identyfikacyjnych."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityCell",
+  "baseDefinition": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-medicalEntityCell",
+        "path": "pl-domain-medicalEntityCell",
+        "short": "MedicalEntityCell: Komórka organizacyjna (model domenowy)",
+        "definition": "Domain model of an organisational cell of a medical entity (according to RPWDL), identified by parts I and VII of the departmental identification code."
+      },
+      {
+        "id": "pl-domain-medicalEntityCell.type",
+        "path": "pl-domain-medicalEntityCell.type",
+        "short": "Type of the organisational cell",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Rodzaj komórki organizacyjnej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Specialty type of the organisational cell (part VIII of the departmental identification code).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Specjalność komórki organizacyjnej (część VIII systemu resortowych kodów identyfikacyjnych)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-medicalEntityCell.address",
+        "path": "pl-domain-medicalEntityCell.address",
+        "short": "Address of the organisational cell",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres komórki organizacyjnej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Address of the organisational cell of the medical entity.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adres komórki organizacyjnej podmiotu leczniczego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-medicalEntityCell.telecom",
+        "path": "pl-domain-medicalEntityCell.telecom",
+        "short": "Contact details of the organisational cell",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe komórki organizacyjnej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the organisational cell, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe komórki organizacyjnej, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-medicalEntityCell.partOf",
+        "path": "pl-domain-medicalEntityCell.partOf",
+        "short": "Organisational unit the cell belongs to",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Jednostka organizacyjna, do której należy komórka"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organisational unit of the medical entity of which this cell is a part.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Jednostka organizacyjna podmiotu leczniczego, której częścią jest ta komórka."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityUnit"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-medicalEntityCell.entityCellIdentifier",
+        "path": "pl-domain-medicalEntityCell.entityCellIdentifier",
+        "short": "Organisational cell identifier (parts I and VII of the departmental code)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator komórki organizacyjnej (część I i VII kodu resortowego)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier of the organisational cell of the medical entity in the RPWDL register, i.e. parts I and VII of the departmental identification code.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikator komórki organizacyjnej podmiotu leczniczego w rejestrze RPWDL, czyli część I i VII systemu resortowych kodów identyfikacyjnych."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      }
+    ]
+  }
+}

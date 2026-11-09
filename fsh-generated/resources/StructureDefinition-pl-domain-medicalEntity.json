@@ -1,0 +1,266 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-medicalEntity",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntity",
+  "name": "PLDomainMedicalEntity",
+  "title": "MedicalEntity: Podmiot medyczny (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a medical entity (healthcare provider) registered in the Register of Entities Performing Medical Activities (RPWDL).",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy podmiotu medycznego (świadczeniodawcy) wpisanego do Rejestru Podmiotów Wykonujących Działalność Leczniczą (RPWDL)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntity",
+  "baseDefinition": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-medicalEntity",
+        "path": "pl-domain-medicalEntity",
+        "short": "MedicalEntity: Podmiot medyczny (model domenowy)",
+        "definition": "Domain model of a medical entity (healthcare provider) registered in the Register of Entities Performing Medical Activities (RPWDL)."
+      },
+      {
+        "id": "pl-domain-medicalEntity.address",
+        "path": "pl-domain-medicalEntity.address",
+        "short": "Address of the medical entity",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres podmiotu medycznego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Address of the registered office of the medical entity.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adres siedziby podmiotu medycznego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-medicalEntity.telecom",
+        "path": "pl-domain-medicalEntity.telecom",
+        "short": "Contact details of the medical entity",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe podmiotu medycznego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the medical entity, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe podmiotu medycznego, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-medicalEntity.entityIdentifier",
+        "path": "pl-domain-medicalEntity.entityIdentifier",
+        "short": "Medical entity identifier (part I of the departmental code)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator podmiotu medycznego (część I kodu resortowego)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier of the medical entity in the RPWDL register, i.e. part I of the departmental identification code (kod resortowy).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikator podmiotu medycznego w rejestrze RPWDL, czyli część I systemu resortowych kodów identyfikacyjnych (kodu resortowego)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-medicalEntity.regonEntityIdentifier",
+        "path": "pl-domain-medicalEntity.regonEntityIdentifier",
+        "short": "REGON number (9 digits)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer REGON (9-znakowy)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "9-digit REGON statistical number of the medical entity in the National Official Business Register (REGON).",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "9-znakowy numer identyfikacyjny REGON podmiotu medycznego w Krajowym Rejestrze Urzędowym Podmiotów Gospodarki Narodowej (REGON)."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-medicalEntity.taxIdentificationNumber",
+        "path": "pl-domain-medicalEntity.taxIdentificationNumber",
+        "short": "Tax identification number (NIP)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer identyfikacji podatkowej (NIP)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Tax identification number (NIP) of the medical entity.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numer identyfikacji podatkowej (NIP) podmiotu medycznego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-telecom",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-telecom",
+  "name": "PLDomainTelecom",
+  "title": "Telecom: Dane kontaktowe (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of contact details in Polish medical records. Specialises EHDSTelecom from the EHDS Common Logical Models, which holds the contact value (phone number, e-mail address).",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy danych kontaktowych w polskiej dokumentacji medycznej. Specjalizacja klasy EHDSTelecom z modeli logicznych EHDS (EHDS Common Logical Models), w której zapisana jest wartość kontaktu (numer telefonu, adres e-mail)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-telecom",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSTelecom",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-telecom",
+        "path": "pl-domain-telecom",
+        "short": "Telecom: Dane kontaktowe (model domenowy)",
+        "definition": "Domain model of contact details in Polish medical records. Specialises EHDSTelecom from the EHDS Common Logical Models, which holds the contact value (phone number, e-mail address)."
+      },
+      {
+        "id": "pl-domain-telecom.type",
+        "path": "pl-domain-telecom.type",
+        "short": "Contact type",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Rodzaj kontaktu"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Mandatory code of the contact type, distinguishing a phone number from an e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Obowiązkowy kod rodzaju kontaktu, pozwalający odróżnić numer telefonu od adresu e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-telecom.type.coding",
+        "path": "pl-domain-telecom.type.coding",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}

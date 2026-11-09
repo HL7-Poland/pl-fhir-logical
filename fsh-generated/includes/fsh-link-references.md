@@ -1,0 +1,14 @@
+[PLDomainAddress]: StructureDefinition-pl-domain-address.html
+[PLDomainHealthProfessional]: StructureDefinition-pl-domain-healthProfessional.html
+[PLDomainHealthProfessionalRole]: StructureDefinition-pl-domain-healthProfessionalRole.html
+[PLDomainHumanName]: StructureDefinition-pl-domain-humanName.html
+[PLDomainLocation]: StructureDefinition-pl-domain-location.html
+[PLDomainMedicalEntity]: StructureDefinition-pl-domain-medicalEntity.html
+[PLDomainMedicalEntityCell]: StructureDefinition-pl-domain-medicalEntityCell.html
+[PLDomainMedicalEntityFacility]: StructureDefinition-pl-domain-medicalEntityFacility.html
+[PLDomainMedicalEntityUnit]: StructureDefinition-pl-domain-medicalEntityUnit.html
+[PLDomainMedicalPractice]: StructureDefinition-pl-domain-medicalPractice.html
+[PLDomainOrganisation]: StructureDefinition-pl-domain-organisation.html
+[PLDomainPatient]: StructureDefinition-pl-domain-patient.html
+[PLDomainServiceLocation]: StructureDefinition-pl-domain-serviceLocation.html
+[PLDomainTelecom]: StructureDefinition-pl-domain-telecom.html

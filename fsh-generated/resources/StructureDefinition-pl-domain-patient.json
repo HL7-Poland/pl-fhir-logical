@@ -1,0 +1,459 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-patient",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-patient",
+  "name": "PLDomainPatient",
+  "title": "Patient: Pacjent (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of the patient identification data required in Polish medical records. Specialises EHDSPatient from the EHDS Common Logical Models.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy danych identyfikujących pacjenta wymaganych w polskiej dokumentacji medycznej. Specjalizacja klasy EHDSPatient z modeli logicznych EHDS (EHDS Common Logical Models)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-patient",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-patient",
+        "path": "pl-domain-patient",
+        "short": "Patient: Pacjent (model domenowy)",
+        "definition": "Domain model of the patient identification data required in Polish medical records. Specialises EHDSPatient from the EHDS Common Logical Models."
+      },
+      {
+        "id": "pl-domain-patient.name",
+        "path": "pl-domain-patient.name",
+        "short": "Patient's name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Imię i nazwisko pacjenta"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Exactly one family name with one or two given names.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dokładnie jedno nazwisko z imieniem lub imionami."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-humanName"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.administrativeGender",
+        "path": "pl-domain-patient.administrativeGender",
+        "definition": "Patient's gender as a single code from a code system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Oznaczenie płci pacjenta jako pojedynczy kod ze słownika."
+                }
+              ]
+            }
+          ]
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Płeć administracyjna"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-patient.administrativeGender.coding",
+        "path": "pl-domain-patient.administrativeGender.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "pl-domain-patient.address",
+        "path": "pl-domain-patient.address",
+        "short": "Patient's address",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres pacjenta"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient's addresses, e.g. place of residence, correspondence address, registered address or place of stay.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresy pacjenta, np. adres miejsca zamieszkania, adres do korespondencji, adres zameldowania lub pobytu."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-address"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.telecom",
+        "path": "pl-domain-patient.telecom",
+        "short": "Patient's contact details",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe pacjenta"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient's contact details, i.e. contact phone number and e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe pacjenta, czyli telefon kontaktowy i adres poczty elektronicznej."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-telecom"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.nationalIdentifier",
+        "path": "pl-domain-patient.nationalIdentifier",
+        "short": "PESEL number",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer PESEL"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Patient's PESEL number. Optional, as it is required only when it has been assigned.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numer PESEL pacjenta. Opcjonalny, ponieważ jest wymagany tylko wtedy, gdy został nadany."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.identityCardNumber",
+        "path": "pl-domain-patient.identityCardNumber",
+        "short": "Identity card number",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer dowodu osobistego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Series and number of the identity card, as the document confirming the identity of a person without a PESEL number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Seria i numer dowodu osobistego jako dokumentu potwierdzającego tożsamość osoby bez numeru PESEL."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.passportNumber",
+        "path": "pl-domain-patient.passportNumber",
+        "short": "Passport number",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer paszportu"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Series and number of the passport, as the document confirming the identity of a person without a PESEL number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Seria i numer paszportu jako dokumentu potwierdzającego tożsamość osoby bez numeru PESEL."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.motherIdentifier",
+        "path": "pl-domain-patient.motherIdentifier",
+        "short": "Mother's identifier",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator matki"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "PESEL number of the mother, used to identify a newborn.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numer PESEL matki, którym oznacza się noworodka."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-patient.multipleBirthNumber",
+        "path": "pl-domain-patient.multipleBirthNumber",
+        "short": "Multiple birth order",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kolejność urodzenia w ciąży mnogiej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Birth order of the patient in a multiple birth.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kolejność urodzenia pacjenta w przypadku ciąży mnogiej."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}

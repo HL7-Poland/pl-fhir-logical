@@ -1,0 +1,114 @@
+[
+  {
+    "outputFile": "StructureDefinition-pl-domain-address.json",
+    "fshName": "PLDomainAddress",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-address.fsh",
+    "startLine": 1,
+    "endLine": 62
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-healthProfessional.json",
+    "fshName": "PLDomainHealthProfessional",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-healthProfessional.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-healthProfessionalRole.json",
+    "fshName": "PLDomainHealthProfessionalRole",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-healthProfessionalRole.fsh",
+    "startLine": 3,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-humanName.json",
+    "fshName": "PLDomainHumanName",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-humanName.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-location.json",
+    "fshName": "PLDomainLocation",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-location.fsh",
+    "startLine": 1,
+    "endLine": 40
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-medicalEntity.json",
+    "fshName": "PLDomainMedicalEntity",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-medicalEntity.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-medicalEntityCell.json",
+    "fshName": "PLDomainMedicalEntityCell",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-medicalEntityCell.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-medicalEntityFacility.json",
+    "fshName": "PLDomainMedicalEntityFacility",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-medicalEntityFacility.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-medicalEntityUnit.json",
+    "fshName": "PLDomainMedicalEntityUnit",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-medicalEntityUnit.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-medicalPractice.json",
+    "fshName": "PLDomainMedicalPractice",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-medicalPractice.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-organisation.json",
+    "fshName": "PLDomainOrganisation",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-organisation.fsh",
+    "startLine": 1,
+    "endLine": 38
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-patient.json",
+    "fshName": "PLDomainPatient",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-patient.fsh",
+    "startLine": 1,
+    "endLine": 54
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-serviceLocation.json",
+    "fshName": "PLDomainServiceLocation",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-serviceLocation.fsh",
+    "startLine": 1,
+    "endLine": 21
+  },
+  {
+    "outputFile": "StructureDefinition-pl-domain-telecom.json",
+    "fshName": "PLDomainTelecom",
+    "fshType": "Logical",
+    "fshFile": "models/pl-domain-telecom.fsh",
+    "startLine": 1,
+    "endLine": 15
+  }
+]

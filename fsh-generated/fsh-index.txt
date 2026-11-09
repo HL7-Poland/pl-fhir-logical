@@ -1,0 +1,15 @@
+Output File                                                Name                            Type     FSH File                                     Lines
+StructureDefinition-pl-domain-address.json                 PLDomainAddress                 Logical  models/pl-domain-address.fsh                 1 - 62
+StructureDefinition-pl-domain-healthProfessional.json      PLDomainHealthProfessional      Logical  models/pl-domain-healthProfessional.fsh      1 - 39
+StructureDefinition-pl-domain-healthProfessionalRole.json  PLDomainHealthProfessionalRole  Logical  models/pl-domain-healthProfessionalRole.fsh  3 - 22
+StructureDefinition-pl-domain-humanName.json               PLDomainHumanName               Logical  models/pl-domain-humanName.fsh               1 - 21
+StructureDefinition-pl-domain-location.json                PLDomainLocation                Logical  models/pl-domain-location.fsh                1 - 40
+StructureDefinition-pl-domain-medicalEntity.json           PLDomainMedicalEntity           Logical  models/pl-domain-medicalEntity.fsh           1 - 26
+StructureDefinition-pl-domain-medicalEntityCell.json       PLDomainMedicalEntityCell       Logical  models/pl-domain-medicalEntityCell.fsh       1 - 32
+StructureDefinition-pl-domain-medicalEntityFacility.json   PLDomainMedicalEntityFacility   Logical  models/pl-domain-medicalEntityFacility.fsh   1 - 26
+StructureDefinition-pl-domain-medicalEntityUnit.json       PLDomainMedicalEntityUnit       Logical  models/pl-domain-medicalEntityUnit.fsh       1 - 26
+StructureDefinition-pl-domain-medicalPractice.json         PLDomainMedicalPractice         Logical  models/pl-domain-medicalPractice.fsh         1 - 17
+StructureDefinition-pl-domain-organisation.json            PLDomainOrganisation            Logical  models/pl-domain-organisation.fsh            1 - 38
+StructureDefinition-pl-domain-patient.json                 PLDomainPatient                 Logical  models/pl-domain-patient.fsh                 1 - 54
+StructureDefinition-pl-domain-serviceLocation.json         PLDomainServiceLocation         Logical  models/pl-domain-serviceLocation.fsh         1 - 21
+StructureDefinition-pl-domain-telecom.json                 PLDomainTelecom                 Logical  models/pl-domain-telecom.fsh                 1 - 15

@@ -1,0 +1,123 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-medicalPractice",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalPractice",
+  "name": "PLDomainMedicalPractice",
+  "title": "MedicalPractice: Medyczna praktyka zawodowa (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a medical professional practice (of a physician, or of a nurse or midwife).",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy medycznej praktyki zawodowej (lekarskiej lub pielęgniarki/położnej)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalPractice",
+  "baseDefinition": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-medicalPractice",
+        "path": "pl-domain-medicalPractice",
+        "short": "MedicalPractice: Medyczna praktyka zawodowa (model domenowy)",
+        "definition": "Domain model of a medical professional practice (of a physician, or of a nurse or midwife)."
+      },
+      {
+        "id": "pl-domain-medicalPractice.identifier",
+        "path": "pl-domain-medicalPractice.identifier",
+        "short": "Identifiers of the medical practice",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikatory praktyki zawodowej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifiers of the medical practice, e.g. the entry number in the register kept by the professional self-government. At least one is mandatory.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikatory medycznej praktyki zawodowej, np. numer wpisu do rejestru prowadzonego przez samorząd zawodowy. Co najmniej jeden jest obowiązkowy."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-medicalPractice.name",
+        "path": "pl-domain-medicalPractice.name",
+        "short": "Name of the medical practice",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Nazwa praktyki zawodowej"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the medical practice.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nazwa medycznej praktyki zawodowej."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

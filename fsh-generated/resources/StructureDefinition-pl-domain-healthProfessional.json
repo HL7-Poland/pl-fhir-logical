@@ -1,0 +1,359 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-healthProfessional",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-healthProfessional",
+  "name": "PLDomainHealthProfessional",
+  "title": "HealthProfessional: Pracownik medyczny (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a health professional in Polish medical records. Specialises EHDSHealthProfessional from the EHDS Common Logical Models.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy pracownika medycznego w polskiej dokumentacji medycznej. Specjalizacja klasy EHDSHealthProfessional z modeli logicznych EHDS (EHDS Common Logical Models)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-healthProfessional",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-healthProfessional",
+        "path": "pl-domain-healthProfessional",
+        "short": "HealthProfessional: Pracownik medyczny (model domenowy)",
+        "definition": "Domain model of a health professional in Polish medical records. Specialises EHDSHealthProfessional from the EHDS Common Logical Models."
+      },
+      {
+        "id": "pl-domain-healthProfessional.name",
+        "path": "pl-domain-healthProfessional.name",
+        "short": "Name of the health professional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Imię i nazwisko pracownika medycznego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Exactly one family name with one or two given names of the health professional.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dokładnie jedno nazwisko z imieniem lub imionami pracownika medycznego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-humanName"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-healthProfessional.address",
+        "path": "pl-domain-healthProfessional.address",
+        "short": "Address of the health professional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres pracownika medycznego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Addresses of the health professional.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresy pracownika medycznego."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-address"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-healthProfessional.telecom",
+        "path": "pl-domain-healthProfessional.telecom",
+        "short": "Contact details of the health professional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe pracownika medycznego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the health professional, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe pracownika medycznego, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-telecom"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-healthProfessional.professionalRole",
+        "path": "pl-domain-healthProfessional.professionalRole",
+        "short": "Professional roles of the health professional",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Role zawodowe pracownika medycznego"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Roles of the health professional in organisations and places of providing healthcare services, as defined by the PLDomainHealthProfessionalRole logical model.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Role pracownika medycznego w organizacjach i miejscach udzielania świadczeń, zgodnie z modelem logicznym PLDomainHealthProfessionalRole."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-healthProfessional.professionalLicenceNumber",
+        "path": "pl-domain-healthProfessional.professionalLicenceNumber",
+        "short": "Professional licence number (NPWZ)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer prawa wykonywania zawodu (NPWZ)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Number of the right to practise the profession (NPWZ) of the health professional, issued by the relevant professional self-government.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numer prawa wykonywania zawodu (NPWZ) pracownika medycznego, nadany przez właściwy samorząd zawodowy."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-healthProfessional.authorizationIdentifier",
+        "path": "pl-domain-healthProfessional.authorizationIdentifier",
+        "short": "Authorisation identifier",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator uprawnień"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier of an authorisation of the health professional to perform healthcare activities, other than the professional licence number.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikator uprawnień pracownika medycznego do wykonywania czynności w ramach opieki zdrowotnej, inny niż numer prawa wykonywania zawodu."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-healthProfessional.qualificationCode",
+        "path": "pl-domain-healthProfessional.qualificationCode",
+        "short": "Qualification code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kod kwalifikacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code of the medical profession and specialties of the health professional.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kod zawodu medycznego i specjalności pracownika medycznego."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      }
+    ]
+  }
+}

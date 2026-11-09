@@ -1,0 +1,301 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-location",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-location",
+  "name": "PLDomainLocation",
+  "title": "Location: Lokalizacja (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a location in Polish medical records, i.e. a physical place where healthcare services may be provided. Specialises EHDSLocation from the EHDS Common Logical Models.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy lokalizacji w polskiej dokumentacji medycznej, czyli fizycznego miejsca, w którym mogą być udzielane świadczenia opieki zdrowotnej. Specjalizacja klasy EHDSLocation z modeli logicznych EHDS (EHDS Common Logical Models)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-location",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLocation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-location",
+        "path": "pl-domain-location",
+        "short": "Location: Lokalizacja (model domenowy)",
+        "definition": "Domain model of a location in Polish medical records, i.e. a physical place where healthcare services may be provided. Specialises EHDSLocation from the EHDS Common Logical Models."
+      },
+      {
+        "id": "pl-domain-location.identifier",
+        "path": "pl-domain-location.identifier",
+        "short": "Identifiers of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikatory lokalizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifiers of the location.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikatory lokalizacji."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-location.name",
+        "path": "pl-domain-location.name",
+        "short": "Name of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Nazwa lokalizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the location. Mandatory.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nazwa lokalizacji. Obowiązkowa."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-location.type",
+        "path": "pl-domain-location.type",
+        "short": "Type of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Rodzaj lokalizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Type of the location, coded with values from a code system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rodzaj lokalizacji, zakodowany wartościami ze słownika."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-location.address",
+        "path": "pl-domain-location.address",
+        "short": "Address of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres lokalizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Address of the location. Mandatory.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adres lokalizacji. Obowiązkowy."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-address"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-location.managingOrganisation",
+        "path": "pl-domain-location.managingOrganisation",
+        "short": "Organisation responsible for the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Organizacja odpowiedzialna za lokalizację"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organisation responsible for the provisioning and upkeep of the location.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organizacja odpowiedzialna za udostępnianie i utrzymanie lokalizacji."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-location.telecom",
+        "path": "pl-domain-location.telecom",
+        "short": "Contact details of the location",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe lokalizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the location, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe lokalizacji, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-telecom"
+          }
+        ]
+      }
+    ]
+  }
+}

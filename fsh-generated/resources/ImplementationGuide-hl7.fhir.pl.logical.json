@@ -1,0 +1,193 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.pl.logical",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/ImplementationGuide/hl7.fhir.pl.logical",
+  "version": "0.1.0",
+  "name": "hl7fhirpllogical",
+  "title": "Polska specyfikacja modeli logicznych (PL Logical)",
+  "status": "draft",
+  "publisher": "HL7 Poland",
+  "contact": [
+    {
+      "name": "HL7 Poland",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org.pl"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.pl.logical",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "xtehr.eu.ehds.models",
+      "version": "1.0.0",
+      "uri": "http://www.xt-ehr.eu/fhir/models/ImplementationGuide/xtehr.eu.ehds.models",
+      "id": "xtehr_eu_ehds_models"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-address"
+        },
+        "name": "Address: Adres (model domenowy)",
+        "description": "Domain model of an address in Polish medical records, including TERYT identifiers. Specialises EHDSAddress from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-healthProfessional"
+        },
+        "name": "HealthProfessional: Pracownik medyczny (model domenowy)",
+        "description": "Domain model of a health professional in Polish medical records. Specialises EHDSHealthProfessional from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-healthProfessionalRole"
+        },
+        "name": "HealthProfessionalRole: Rola zawodowa pracownika medycznego (model domenowy)",
+        "description": "Domain model of a professional role of a health professional in an organisation or a place of providing healthcare services. Corresponds to the professionalRole element of EHDSHealthProfessional from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-humanName"
+        },
+        "name": "HumanName: Imię i nazwisko (model domenowy)",
+        "description": "Domain model of a person's name in Polish medical records. Specialises EHDSHumanName from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-location"
+        },
+        "name": "Location: Lokalizacja (model domenowy)",
+        "description": "Domain model of a location in Polish medical records, i.e. a physical place where healthcare services may be provided. Specialises EHDSLocation from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-medicalEntity"
+        },
+        "name": "MedicalEntity: Podmiot medyczny (model domenowy)",
+        "description": "Domain model of a medical entity (healthcare provider) registered in the Register of Entities Performing Medical Activities (RPWDL).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-medicalEntityCell"
+        },
+        "name": "MedicalEntityCell: Komórka organizacyjna (model domenowy)",
+        "description": "Domain model of an organisational cell of a medical entity (according to RPWDL), identified by parts I and VII of the departmental identification code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-medicalEntityFacility"
+        },
+        "name": "MedicalEntityFacility: Zakład podmiotu medycznego (model domenowy)",
+        "description": "Domain model of a facility (local unit) of a medical entity, identified by its own 14-digit REGON number.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-medicalEntityUnit"
+        },
+        "name": "MedicalEntityUnit: Jednostka organizacyjna (model domenowy)",
+        "description": "Domain model of an organisational unit of a medical entity (according to RPWDL), identified by parts I and V of the departmental identification code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-medicalPractice"
+        },
+        "name": "MedicalPractice: Medyczna praktyka zawodowa (model domenowy)",
+        "description": "Domain model of a medical professional practice (of a physician, or of a nurse or midwife).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-organisation"
+        },
+        "name": "Organisation: Organizacja (model domenowy)",
+        "description": "Domain model of an organisation in Polish medical records, being the common base of medical entities, their organisational parts and medical practices. Specialises EHDSOrganisation from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-patient"
+        },
+        "name": "Patient: Pacjent (model domenowy)",
+        "description": "Domain model of the patient identification data required in Polish medical records. Specialises EHDSPatient from the EHDS Common Logical Models.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-serviceLocation"
+        },
+        "name": "ServiceLocation: Miejsce udzielania świadczeń (model domenowy)",
+        "description": "Domain model of a place of providing healthcare services, managed by an organisational cell of a medical entity or by a medical professional practice.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pl-domain-telecom"
+        },
+        "name": "Telecom: Dane kontaktowe (model domenowy)",
+        "description": "Domain model of contact details in Polish medical records. Specialises EHDSTelecom from the EHDS Common Logical Models, which holds the contact value (phone number, e-mail address).",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Wprowadzenie",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "logical.html",
+          "title": "Model logiczny",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "translationinfo.html",
+          "title": "Informacje o tłumaczeniu",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2026+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "i18n-default-lang",
+        "value": "pl"
+      },
+      {
+        "code": "i18n-lang",
+        "value": "en"
+      },
+      {
+        "code": "translation-sources",
+        "value": "input/translations/en#"
+      }
+    ]
+  }
+}

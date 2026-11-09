@@ -1,0 +1,178 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-serviceLocation",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-serviceLocation",
+  "name": "PLDomainServiceLocation",
+  "title": "ServiceLocation: Miejsce udzielania świadczeń (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of a place of providing healthcare services, managed by an organisational cell of a medical entity or by a medical professional practice.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy miejsca udzielania świadczeń, którym zarządza komórka organizacyjna podmiotu leczniczego albo medyczna praktyka zawodowa."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-serviceLocation",
+  "baseDefinition": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-location",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-serviceLocation",
+        "path": "pl-domain-serviceLocation",
+        "short": "ServiceLocation: Miejsce udzielania świadczeń (model domenowy)",
+        "definition": "Domain model of a place of providing healthcare services, managed by an organisational cell of a medical entity or by a medical professional practice."
+      },
+      {
+        "id": "pl-domain-serviceLocation.identifier",
+        "path": "pl-domain-serviceLocation.identifier",
+        "short": "Identifiers of the place of providing services",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikatory miejsca udzielania świadczeń"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifiers of the place of providing healthcare services. At least one is mandatory.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikatory miejsca udzielania świadczeń. Co najmniej jeden jest obowiązkowy."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-serviceLocation.managingOrganisation",
+        "path": "pl-domain-serviceLocation.managingOrganisation",
+        "short": "Organisational cell or medical practice managing the place",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Komórka organizacyjna lub praktyka zawodowa zarządzająca miejscem"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organisational cell of a medical entity or medical professional practice that manages this place of providing healthcare services.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Komórka organizacyjna podmiotu leczniczego albo medyczna praktyka zawodowa, która zarządza tym miejscem udzielania świadczeń."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalEntityCell"
+          },
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-medicalPractice"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-serviceLocation.specialtyCode",
+        "path": "pl-domain-serviceLocation.specialtyCode",
+        "short": "Specialty code",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kod specjalności"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Code of the medical specialty of the healthcare services provided in this place.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kod specjalności medycznej świadczeń udzielanych w tym miejscu."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-address",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-address",
+  "name": "PLDomainAddress",
+  "title": "Address: Adres (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of an address in Polish medical records, including TERYT identifiers. Specialises EHDSAddress from the EHDS Common Logical Models.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy adresu w polskiej dokumentacji medycznej, z uwzględnieniem identyfikatorów TERYT. Specjalizacja klasy EHDSAddress z modeli logicznych EHDS (EHDS Common Logical Models)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-address",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAddress",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-address",
+        "path": "pl-domain-address",
+        "short": "Address: Adres (model domenowy)",
+        "definition": "Domain model of an address in Polish medical records, including TERYT identifiers. Specialises EHDSAddress from the EHDS Common Logical Models."
+      },
+      {
+        "id": "pl-domain-address.text",
+        "path": "pl-domain-address.text",
+        "short": "Address as text",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres jako tekst"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Address written as a single string, e.g. when it cannot be split into fields.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adres zapisany jednym ciągiem tekstu, np. gdy nie da się go rozbić na pola."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-address.houseNumber",
+        "path": "pl-domain-address.houseNumber",
+        "definition": "Number of the building.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numer budynku."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer budynku"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-address.postBox",
+        "path": "pl-domain-address.postBox",
+        "definition": "Post box, relevant for a correspondence address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Skrytka pocztowa, istotna dla adresu do korespondencji."
+                }
+              ]
+            }
+          ]
+        },
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Skrytka pocztowa"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-address.city",
+        "path": "pl-domain-address.city",
+        "definition": "Name of the city or locality.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nazwa miejscowości."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Miejscowość"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-address.postalCode",
+        "path": "pl-domain-address.postalCode",
+        "definition": "Postal code.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kod pocztowy."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kod pocztowy"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-address.country",
+        "path": "pl-domain-address.country",
+        "short": "Country",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Kraj"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Country, coded with a value from a defined value set.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Kraj, zakodowany wartością z określonego zbioru kodów."
+                }
+              ]
+            }
+          ]
+        },
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+        }
+      },
+      {
+        "id": "pl-domain-address.streetName",
+        "path": "pl-domain-address.streetName",
+        "short": "Street name",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Nazwa ulicy"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the street.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nazwa ulicy."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-address.unitId",
+        "path": "pl-domain-address.unitId",
+        "short": "Unit number",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Numer lokalu"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Number of the apartment or premises.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Numer lokalu."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-address.administrativeUnitIdentifier",
+        "path": "pl-domain-address.administrativeUnitIdentifier",
+        "short": "Administrative unit identifier (TERC)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator jednostki podziału terytorialnego (TERC)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier of the territorial division unit (voivodeship, county, municipality), i.e. the TERC code from the TERYT register.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikator jednostki podziału terytorialnego (województwo, powiat, gmina), czyli kod TERC z rejestru TERYT."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-address.localityIdentifier",
+        "path": "pl-domain-address.localityIdentifier",
+        "short": "Locality identifier (SIMC)",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikator miejscowości (SIMC)"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifier of the locality, i.e. the SIMC code from the TERYT register.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikator miejscowości, czyli kod SIMC z rejestru TERYT."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      }
+    ]
+  }
+}

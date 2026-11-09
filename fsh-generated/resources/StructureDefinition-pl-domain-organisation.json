@@ -1,0 +1,298 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pl-domain-organisation",
+  "url": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "name": "PLDomainOrganisation",
+  "title": "Organisation: Organizacja (model domenowy)",
+  "status": "draft",
+  "description": "Domain model of an organisation in Polish medical records, being the common base of medical entities, their organisational parts and medical practices. Specialises EHDSOrganisation from the EHDS Common Logical Models.",
+  "_description": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+        "extension": [
+          {
+            "url": "lang",
+            "valueCode": "pl"
+          },
+          {
+            "url": "content",
+            "valueMarkdown": "Model domenowy organizacji w polskiej dokumentacji medycznej, stanowiący wspólną podstawę dla podmiotów medycznych, ich części organizacyjnych oraz praktyk zawodowych. Specjalizacja klasy EHDSOrganisation z modeli logicznych EHDS (EHDS Common Logical Models)."
+          }
+        ]
+      }
+    ]
+  },
+  "fhirVersion": "5.0.0",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation",
+  "baseDefinition": "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "pl-domain-organisation",
+        "path": "pl-domain-organisation",
+        "short": "Organisation: Organizacja (model domenowy)",
+        "definition": "Domain model of an organisation in Polish medical records, being the common base of medical entities, their organisational parts and medical practices. Specialises EHDSOrganisation from the EHDS Common Logical Models."
+      },
+      {
+        "id": "pl-domain-organisation.identifier",
+        "path": "pl-domain-organisation.identifier",
+        "short": "Identifiers of the organisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Identyfikatory organizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Identifiers of the organisation.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Identyfikatory organizacji."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-organisation.type",
+        "path": "pl-domain-organisation.type",
+        "short": "Type of the organisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Rodzaj organizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Type of the organisation, coded with values from a code system.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Rodzaj organizacji, zakodowany wartościami ze słownika."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pl-domain-organisation.name",
+        "path": "pl-domain-organisation.name",
+        "short": "Name of the organisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Nazwa organizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Name of the organisation. Mandatory.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Nazwa organizacji. Obowiązkowa."
+                }
+              ]
+            }
+          ]
+        },
+        "min": 1
+      },
+      {
+        "id": "pl-domain-organisation.address",
+        "path": "pl-domain-organisation.address",
+        "short": "Address of the organisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Adres organizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Addresses of the organisation.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Adresy organizacji."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-address"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-organisation.telecom",
+        "path": "pl-domain-organisation.telecom",
+        "short": "Contact details of the organisation",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Dane kontaktowe organizacji"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Contact details of the organisation, e.g. phone number or e-mail address.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Dane kontaktowe organizacji, np. numer telefonu lub adres e-mail."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-telecom"
+          }
+        ]
+      },
+      {
+        "id": "pl-domain-organisation.partOf",
+        "path": "pl-domain-organisation.partOf",
+        "short": "Organisation this organisation is part of",
+        "_short": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Organizacja nadrzędna"
+                }
+              ]
+            }
+          ]
+        },
+        "definition": "Organisation of which this organisation is a part.",
+        "_definition": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "pl"
+                },
+                {
+                  "url": "content",
+                  "valueMarkdown": "Organizacja, której częścią jest ta organizacja."
+                }
+              ]
+            }
+          ]
+        },
+        "type": [
+          {
+            "code": "http://hl7.org.pl/fhir/ig/pl-logical/StructureDefinition/pl-domain-organisation"
+          }
+        ]
+      }
+    ]
+  }
+}
